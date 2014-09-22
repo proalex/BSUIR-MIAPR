@@ -1,0 +1,14 @@
+C:\C#\MIAPR\lab1\lab1\bin\Debug\lab1.exe.config
+C:\C#\MIAPR\lab1\lab1\bin\Debug\lab1.exe
+C:\C#\MIAPR\lab1\lab1\bin\Debug\lab1.pdb
+C:\C#\MIAPR\lab1\lab1\obj\Debug\lab1.csprojResolveAssemblyReference.cache
+C:\C#\MIAPR\lab1\lab1\obj\Debug\lab1.Form1.resources
+C:\C#\MIAPR\lab1\lab1\obj\Debug\lab1.Properties.Resources.resources
+C:\C#\MIAPR\lab1\lab1\obj\Debug\lab1.csproj.GenerateResource.Cache
+C:\C#\MIAPR\lab1\lab1\obj\Debug\lab1.exe
+C:\C#\MIAPR\lab1\lab1\obj\Debug\lab1.pdb
+C:\C#\MIAPR\lab1\lab1\bin\Debug\KMeans.dll
+C:\C#\MIAPR\lab1\lab1\bin\Debug\KMeans.pdb
+C:\C#\BSUIR-MIAPR\lab1\lab1\bin\Debug\lab1.exe.config
+C:\C#\BSUIR-MIAPR\lab1\lab1\obj\Debug\lab1.exe
+C:\C#\BSUIR-MIAPR\lab1\lab1\obj\Debug\lab1.pdb
