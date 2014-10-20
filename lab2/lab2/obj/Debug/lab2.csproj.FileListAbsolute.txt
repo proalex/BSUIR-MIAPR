@@ -1,0 +1,3 @@
+C:\C#\BSUIR-MIAPR\lab2\lab2\bin\Debug\lab1.exe.config
+C:\C#\BSUIR-MIAPR\lab2\lab2\obj\Debug\lab1.exe
+C:\C#\BSUIR-MIAPR\lab2\lab2\obj\Debug\lab1.pdb
