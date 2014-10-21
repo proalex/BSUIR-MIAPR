@@ -11,6 +11,19 @@ namespace KMeansAlg
         private int _clustersCount;
         private List<Cluster> _clusters;
 
+        public KMeans(List<KMPoint> points, List<Cluster> clusters)
+        {
+            if (points == null)
+                throw new NullReferenceException("points is null");
+
+            if (clusters == null)
+                throw new NullReferenceException("clusters is null");
+
+            _clustersCount = clusters.Count;
+            _clusters = clusters;
+            _points = points;
+        }
+
         public KMeans(List<KMPoint> points, int clustersCount)
         {
             uint currentColor = 35;

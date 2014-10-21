@@ -7,8 +7,8 @@ namespace MaxMinAlg
 {
     public class MaxMin
     {
-        private List<KMPoint> _points;
-        private List<Cluster> _clusters;
+        public List<KMPoint> _points;
+        public List<Cluster> _clusters;
         private KnownColor[] _allColors;
         private int _colorIndex = 35;
 
@@ -54,7 +54,20 @@ namespace MaxMinAlg
             KMPoint max = null;
             bool newCore = false;
             double maxDistance = 0;
-            double minDistance = _clusters[0].Center.GetDistanceTo(_clusters[1].Center)/2;
+            double minDistance = 0;
+            double count = 0;
+
+            for (var i = 0; i < _clusters.Count; i++)
+            {
+                for (var j = i + 1; j < _clusters.Count; j++)
+                {
+                    minDistance += _clusters[i].Center.GetDistanceTo(_clusters[j].Center);
+                    count++;
+                }
+            }
+
+            minDistance /= count;
+            minDistance /= 2;
 
             foreach (var cluster in _clusters)
             {

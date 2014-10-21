@@ -5,3 +5,10 @@ C:\C#\BSUIR-MIAPR\lab1\MaxMinAlg\bin\Debug\KMeans.pdb
 C:\C#\BSUIR-MIAPR\lab1\MaxMinAlg\obj\Debug\MaxMinAlg.csprojResolveAssemblyReference.cache
 C:\C#\BSUIR-MIAPR\lab1\MaxMinAlg\obj\Debug\MaxMinAlg.dll
 C:\C#\BSUIR-MIAPR\lab1\MaxMinAlg\obj\Debug\MaxMinAlg.pdb
+D:\C#\BSUIR-MIAPR\lab2\MaxMinAlg\bin\Debug\MaxMinAlg.dll
+D:\C#\BSUIR-MIAPR\lab2\MaxMinAlg\bin\Debug\MaxMinAlg.pdb
+D:\C#\BSUIR-MIAPR\lab2\MaxMinAlg\bin\Debug\KMeans.dll
+D:\C#\BSUIR-MIAPR\lab2\MaxMinAlg\bin\Debug\KMeans.pdb
+D:\C#\BSUIR-MIAPR\lab2\MaxMinAlg\obj\Debug\MaxMinAlg.csprojResolveAssemblyReference.cache
+D:\C#\BSUIR-MIAPR\lab2\MaxMinAlg\obj\Debug\MaxMinAlg.dll
+D:\C#\BSUIR-MIAPR\lab2\MaxMinAlg\obj\Debug\MaxMinAlg.pdb

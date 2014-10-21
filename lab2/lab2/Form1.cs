@@ -16,6 +16,9 @@ namespace lab1
         private BufferedGraphics _graphicsBuffer;
         private object _sync = new object();
         private List<KMPoint> _points = new List<KMPoint>();
+        private int _dotCount;
+        private int _classCount;
+        private MaxMin _maxmin;
 
         public Form1()
         {
@@ -37,7 +40,6 @@ namespace lab1
                 button1.Enabled = false;
                 button2.Enabled = true;
                 button3.Enabled = false;
-                textBox1.Enabled = false;
                 textBox2.Enabled = false;
                 checkBox1.Enabled = false;
                 button1.Text = "Выполнение...";
@@ -67,17 +69,8 @@ namespace lab1
             bool changed;
             bool drawLine = checkBox1.Checked;
             uint currentIteration = 0;
-            Random random = new Random();
             BackgroundWorker worker = sender as BackgroundWorker;
-            int classCount = Convert.ToInt32(textBox1.Text, 10);
-            int dotCount = Convert.ToInt32(textBox2.Text, 10);
-
-            _points.Clear();
-
-            for (int i = 0; i < dotCount; i++)
-                _points.Add(new KMPoint(random.Next(10, 700), random.Next(30, 350)));
-
-            KMeans kmeans = new KMeans(_points, classCount);
+            KMeans kmeans = new KMeans(_maxmin._points, _maxmin._clusters);
 
             do
             {
@@ -115,31 +108,37 @@ namespace lab1
         {
             bool newCore;
             bool drawLine = checkBox1.Checked;
-            MaxMin maxmin = new MaxMin(_points);
+            Random random = new Random();
 
             button2.Invoke(new Action(delegate() { button2.Enabled = false; }));
+            _dotCount = Convert.ToInt32(textBox2.Text, 10);
+            _points.Clear();
+
+            for (int i = 0; i < _dotCount; i++)
+                _points.Add(new KMPoint(random.Next(10, 700), random.Next(30, 350)));
+
+            _maxmin = new MaxMin(_points);
 
             do
             {
-                newCore = maxmin.Calculate();
+                newCore = _maxmin.Calculate();
             } while (newCore);
 
             lock (_sync)
             {
                 _graphicsBuffer.Graphics.Clear(BackColor);
-                maxmin.DrawClusters(_graphicsBuffer.Graphics, drawLine);
+                _maxmin.DrawClusters(_graphicsBuffer.Graphics, drawLine);
                 _graphicsBuffer.Render();
             }
         }
 
         private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            button1.Text = "Запуск k-means";
+            button1.Text = "K-means";
             button1.Update();
             button1.Enabled = true;
             button2.Enabled = false;
             button3.Enabled = true;
-            textBox1.Enabled = true;
             textBox2.Enabled = true;
             checkBox1.Enabled = true;
         }
@@ -201,7 +200,6 @@ namespace lab1
             {
                 button1.Enabled = false;
                 button3.Enabled = false;
-                textBox1.Enabled = false;
                 textBox2.Enabled = false;
                 checkBox1.Enabled = false;
                 _bw2.RunWorkerAsync();
