@@ -1,5 +1,0 @@
-C:\C#\MIAPR\lab1\KMeans\obj\Debug\KMeans.csprojResolveAssemblyReference.cache
-C:\C#\MIAPR\lab1\KMeans\bin\Debug\KMeans.dll
-C:\C#\MIAPR\lab1\KMeans\bin\Debug\KMeans.pdb
-C:\C#\MIAPR\lab1\KMeans\obj\Debug\KMeans.dll
-C:\C#\MIAPR\lab1\KMeans\obj\Debug\KMeans.pdb
